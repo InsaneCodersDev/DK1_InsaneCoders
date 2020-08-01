@@ -1,0 +1,204 @@
+<body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+  
+      <!-- Sidebar -->
+      <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+  
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/dashboard">
+          <div class="sidebar-brand-icon rotate-n-15">
+            <i class="fas fa-microphone-alt"></i>
+          </div>
+          <div class="sidebar-brand-text mx-3">VOID ADMIN</div>
+        </a>
+  
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+  
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item active">
+          <a class="nav-link" href="/dashboard">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span></a>
+        </li>
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+  
+        <!-- Heading -->
+        <div class="sidebar-heading">
+          Interface
+        </div>
+  
+        <!-- Nav Registration -->
+        <li class="nav-item">
+          <a class="nav-link" href="/register">
+            <i class="fas fa-registered"></i>
+            <span>Register</span></a>
+        </li>
+  
+        <!-- Train Model -->
+        <li class="nav-item">
+          <a class="nav-link" href="/train">
+            <i class="fab fa-leanpub"></i>
+            <span>Train Model</span></a>
+        </li>
+  
+        <!-- Exceptional case -->
+        <li class="nav-item">
+          <a class="nav-link" href="/exception">
+            <i class="fas fa-exclamation-triangle"></i>
+            <span>Provide Exception</span></a>
+        </li>
+  
+  
+        <!-- User Profile -->
+        <li class="nav-item">
+          <a class="nav-link" href="/profile">
+            <i class="fas fa-fw fa-user"></i>
+            <span>User Profile</span></a>
+        </li>
+  
+        <!-- Nav Item - Tables -->
+        <li class="nav-item">
+          <a class="nav-link" href="/attendance">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Overall Attendance</span></a>
+        </li>
+  
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+  
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+          <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+  
+      </ul>
+      <!-- End of Sidebar -->
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+  
+        <!-- Main Content -->
+        <div id="content">
+  
+          <!-- Topbar -->
+          <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+  
+            <!-- Sidebar Toggle (Topbar) -->
+            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+              <i class="fa fa-bars"></i>
+            </button>
+  
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav ml-auto">
+              <!-- Nav Item - User Information -->
+              <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="mr-2 d-none d-lg-inline text-gray-600 small">Ovesh Patel</span>
+                  <img class="img-profile rounded-circle" src="img/ovi.jpg">
+                </a>
+                <!-- Dropdown - User Information -->
+                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                  <a class="dropdown-item" href="/logout">
+                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Logout
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <!-- End of Topbar -->
+  
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
+  
+            <!-- Page Heading -->
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+              <h1 class="h3 mb-0 text-gray-800">Register Employee</h1>
+            </div>
+  
+            <!-- Content Row -->
+            <div class="row">
+              <div class="col-sm-6 col-xl-12 col-lg-12">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Details Form</h6>
+                </div>
+                <div class="card-body ">
+                  <form class="user" id="formElement" method="POST" action="/register" enctype="multipart/form-data">
+                    <%- include('./partials/messages.ejs') %>
+                    <div class="form-group row">
+                      <div class="col-sm-6 mb-3 mb-sm-0">
+                        <input type="text" class="form-control form-control-user border-bottom-primary" id="name" name="name" placeholder="Name" value="<%= typeof name != 'undefined' ? name : '' %>">
+                      </div>
+                      <div class="col-sm-6">
+                        <input type="text" class="form-control form-control-user border-bottom-primary" id="phn" name="phn" placeholder="Phone Number" value="<%= typeof phn != 'undefined' ? phn : '' %>">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-sm-6 mb-3 mb-sm-0">
+                        <input type="email" class="form-control form-control-user border-bottom-primary" id="email" name="email" placeholder="Email Address" value="<%= typeof email != 'undefined' ? email : '' %>">
+                      </div>
+                      <div class="col-sm-6">
+                        <input type="text" class="form-control form-control-user border-bottom-primary" id="username" name="username" placeholder="User Id" value="<%= typeof username != 'undefined' ? username : '' %>">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-sm-6 mb-3 mb-sm-0">
+                        <input type="password" class="form-control form-control-user border-bottom-primary" id="password" name="password" placeholder="Password" value="<%= typeof password != 'undefined' ? password : '' %>">
+                      </div>
+                      <div class="col-sm-6">
+                        <input type="password" class="form-control form-control-user border-bottom-primary" id="password2" name="password2" placeholder="Repeat Password" value="<%= typeof password2 != 'undefined' ? password2 : '' %>">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-sm-6 mb-3 mb-sm-0">
+                        <input type="text" class="form-control form-control-user border-bottom-primary" id="department" name="department" placeholder="Department Name" value="<%= typeof department != 'undefined' ? department : '' %>">
+                      </div>
+                      <div class="col-sm-6">
+                        <input type="text" class="form-control form-control-user border-bottom-primary" id="designation" name="designation" placeholder="Designation" value="<%= typeof designation != 'undefined' ? designation : '' %>">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-sm-6 mb-3 mb-sm-0">
+                        <label for="DOB" class="">DOB</label>
+                        <input type="date" class="form-control form-control-user border-bottom-primary" id="dob" name="dob" placeholder="DOB" value="<%= typeof dob != 'undefined' ? dob : '' %>">
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="image">Upload Image</label>
+                        <div class="custom-file">
+                          <input type="file" class=" form-control form-control-file border-bottom-primary" id="image_url" name="img_url" required>
+                        </div>
+                      </div>
+                    </div>
+                    <input id="myButton" type="submit" class="btn btn-primary btn-user btn-block" value="Register Account">
+                  </input>
+                  </form>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          <!-- /.container-fluid -->
+  
+        </div>
+        <!-- End of Main Content -->
+  
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Copyright &copy; Insane Coders</span>
+            </div>
+          </div>
+        </footer>
+        <!-- End of Footer -->
+  
+      </div>
+      <!-- End of Content Wrapper -->
+  
+    </div>
+    <!-- End of Page Wrapper -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+  </body>
