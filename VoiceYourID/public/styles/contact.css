@@ -1,0 +1,36 @@
+.row{
+    color: white;
+}
+.contact_info .info_item i {
+    position: relative;
+    font-size: 20px;
+    line-height: 24px;
+    color: #766dff;
+    font-weight: 600;
+}
+.contact_info .info_item h6 {
+    font-size: 16px;
+    line-height: 24px;
+    color: "Roboto", sans-serif;
+    font-weight: bold;
+}
+.contact_info .info_item p {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 2px 0px;
+}
+.contact_form .form-group .form-control {
+    top:10;
+    font-size: 13px;
+    line-height: 26px;
+    border: 2px solid #eeeeee;
+    font-family: "Roboto", sans-serif;
+    border-radius: 1px;
+    padding-left: 20px;
+}
+.contact_form .form-group textarea.form-control {
+    height: 140px;
+}
+.text-right {
+    text-align: right !important;
+}

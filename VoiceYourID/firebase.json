@@ -1,0 +1,29 @@
+{
+  "hosting": {
+    "redirects": [
+      {
+        "source": "/Attendance",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/Location",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/Report",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/Train",
+        "destination": "/",
+        "type": 301
+      }
+    ],
+    "site": "voiceyourid",
+    "public": "build",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}

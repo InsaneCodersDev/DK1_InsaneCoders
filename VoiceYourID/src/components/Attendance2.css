@@ -1,0 +1,90 @@
+.bg-contact100 {
+    height: 100vh;
+   
+  }
+
+  @media screen and (max-width:800px)
+  
+  {
+    .maincard{
+    
+    margin-left:auto;
+    margin-right: auto;
+    margin-top:15vh;
+    max-height:75vh;
+    width:90vw;
+    /* padding-bottom: 50px; */
+    /* transform: translate(-50%); */
+    background-color: rgba(25,25,25,1);
+    padding: 25px 20px 0px 20px;
+    }
+    .circlephoto
+{
+
+  margin: auto;
+}
+
+
+.mic{
+  padding: 0px 2vw 40px 0px;
+}
+  }
+
+
+
+  @media screen and (min-width:801px)
+  
+  {
+    .maincard{
+    margin-left:50%;
+    margin-top:15vh;
+    height:55vh;
+    width:35vw;
+    transform: translate(-50%);
+    background-color: rgba(35,35,35,0.8);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+    padding: 50px 40px 0px 40px;
+    }
+    .circlephoto
+{
+  margin: auto;
+}
+  }
+
+
+  .progressr {
+    height: 3vh;
+    width: 10%;
+    border-radius: 20px;
+    background-color: #d8d8d891;
+    margin: 15px 0px 10px 0px;
+    /* padding: 0px 10px 0px 0px; */
+  }
+  
+  .progress-doner {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to right, #a2de96, #2b580c);
+    box-shadow: 0 3px 3px -5px #393e46, 0 2px 5px #393e46;
+    border-radius: 20px;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    opacity: 0%;
+    transition: 2s linear;
+  }
+
+  #message
+  {
+    transition: 0.5s linear;
+    animation: text 3s 1;
+  }
+
+  .say{
+    padding: 20px 0px 0px 0px;
+    font-size: 18px;
+    color:white;
+    font-weight: bold;
+  }

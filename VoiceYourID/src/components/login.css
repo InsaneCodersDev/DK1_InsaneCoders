@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Source+Sans+Pro:200,400");
+
+.logpage {
+  background: linear-gradient(to bottom, #232323, #000000);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px rgba(20, 20, 20, 1) inset !important;
+  -webkit-text-fill-color: grey !important;
+}
