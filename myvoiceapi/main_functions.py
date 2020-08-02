@@ -42,7 +42,7 @@ def calculate_delta(array):
 
 #convert audio to mfcc features
 def extract_features(audio,rate):    
-    mfcc_feat = mfcc.mfcc(audio,rate, 0.025, 0.005,20,appendEnergy = True, nfft=512,winfunc=np.hanning, nfilt=30,ceplifter=22)
+    mfcc_feat = mfcc.mfcc(audio,rate, 0.025, 0.01,20,appendEnergy = True, nfft=1103)
     mfcc_feat = preprocessing.scale(mfcc_feat)
     delta = calculate_delta(mfcc_feat)
 
