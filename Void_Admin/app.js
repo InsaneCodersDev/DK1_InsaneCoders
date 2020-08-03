@@ -62,6 +62,13 @@ app.use(session({
 //Routes
 app.use('/',require('./routes/admin'));
 app.use('/register',require('./routes/registration'));
+app.use('/exception',require('./routes/exception'));
+app.use('/profile',require('./routes/profile'));
+app.use('/attendance',require('./routes/attendance'));
+app.use('/grant',require('./routes/grant'));
+app.use('/train',require('./routes/train'));
+app.use('/state',require('./routes/state'));
+app.use('/district',require('./routes/district'));
 
 
 const PORT = process.env.PORT || 3000;

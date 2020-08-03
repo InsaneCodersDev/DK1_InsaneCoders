@@ -15,9 +15,6 @@ module.exports = function(passport){
                     if(!user){
                         return done(null, false, {message: 'That id is not registered'});
                     }
-                    // Match password
-                    console.log(user.admin_password);
-                    console.log(admin_password);
                     bcrypt.compare(admin_password, user.admin_password).then((isMatch) => {
                         if(isMatch){
                             return done(null,user);

@@ -17,14 +17,27 @@ router.get('/',(req,res)=>{
 
 //login handling post request
 router.post('/',(req,res,next)=>{
-    passport.authenticate('local',{
-        successRedirect:'/dashboard',
-        failureRedirect:'/',
-        session:true,
-        failureFlash:true
-    })(req,res,next);
-    res.locals.user = req.body.admin
-    
+    console.log(req.body.admin_id);
+    Admin.findOne({admin_id:req.body.admin_id})
+        .then(user=>{
+            if(user.position === 'district'){
+                passport.authenticate('local',{
+                    successRedirect:'/dashboard',
+                    failureRedirect:'/',
+                    session:true,
+                    failureFlash:true
+                })(req,res,next);
+                res.locals.user = req.body.admin;
+            } else if(user.position === 'state'){
+                passport.authenticate('local',{
+                    successRedirect:'/state',
+                    failureRedirect:'/',
+                    session:true,
+                    failureFlash:true
+                })(req,res,next);
+                res.locals.user = req.body.admin;
+            }
+        }).catch(err=>console.log(err))   
 });
 
 //Dashboard
@@ -43,7 +56,6 @@ router.get('/dashboard',(req,res)=> {
                     counts[3]++;
                 }
             }
-            console.log(counts);
             const count_employ =counts.reduce(function(a, b){
                 return a + b;
             }, 0);
@@ -79,6 +91,7 @@ router.get('/dashboard',(req,res)=> {
                                                         } 
                                                     }
                                                 }
+                                                location  = "Mumbai";
                                                 res.render('dashboard', {
                                                     count_employ,
                                                     count_present,
@@ -87,7 +100,8 @@ router.get('/dashboard',(req,res)=> {
                                                     count_grant,
                                                     counts,
                                                     dates,
-                                                    count
+                                                    count,
+                                                    location
                                                 });
                                             }).catch(err=>console.log(err));
                                 })
@@ -111,7 +125,6 @@ router.post('/dashboard',(req,res)=> {
                 counts[3]++;
             }
         }
-        console.log(counts);
         const count_employ =counts.reduce(function(a, b){
             return a + b;
         }, 0);
@@ -145,6 +158,7 @@ router.post('/dashboard',(req,res)=> {
                                                     } 
                                                 }
                                             }
+                                            location  = "Mumbai";
                                             res.render('dashboard', {
                                                 count_employ,
                                                 count_present,
@@ -153,7 +167,8 @@ router.post('/dashboard',(req,res)=> {
                                                 count_grant,
                                                 counts,
                                                 dates,
-                                                count
+                                                count,
+                                                location
                                             });
                                         }).catch(err=>console.log(err));
                             })

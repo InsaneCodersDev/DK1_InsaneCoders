@@ -1,81 +1,6 @@
 <body id="page-top">
     <!-- Page Wrapper -->
     <div id="wrapper">
-  
-      <!-- Sidebar -->
-      <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-  
-        <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/dashboard">
-          <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-microphone-alt"></i>
-          </div>
-          <div class="sidebar-brand-text mx-3">VOID ADMIN</div>
-        </a>
-  
-        <!-- Divider -->
-        <hr class="sidebar-divider my-0">
-  
-        <!-- Nav Item - Dashboard -->
-        <li class="nav-item active">
-          <a class="nav-link" href="/dashboard">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span></a>
-        </li>
-        <!-- Divider -->
-        <hr class="sidebar-divider">
-  
-        <!-- Heading -->
-        <div class="sidebar-heading">
-          Interface
-        </div>
-  
-        <!-- Nav Registration -->
-        <li class="nav-item">
-          <a class="nav-link" href="/register">
-            <i class="fas fa-registered"></i>
-            <span>Register</span></a>
-        </li>
-  
-        <!-- Train Model -->
-        <li class="nav-item">
-          <a class="nav-link" href="/train">
-            <i class="fab fa-leanpub"></i>
-            <span>Train Model</span></a>
-        </li>
-  
-        <!-- Exceptional case -->
-        <li class="nav-item">
-          <a class="nav-link" href="/exception">
-            <i class="fas fa-exclamation-triangle"></i>
-            <span>Provide Exception</span></a>
-        </li>
-  
-  
-        <!-- User Profile -->
-        <li class="nav-item">
-          <a class="nav-link" href="/profile">
-            <i class="fas fa-fw fa-user"></i>
-            <span>User Profile</span></a>
-        </li>
-  
-        <!-- Overall Attendance -->
-        <li class="nav-item">
-          <a class="nav-link" href="/attendance">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Overall Attendance</span></a>
-        </li>
-  
-        <!-- Divider -->
-        <hr class="sidebar-divider d-none d-md-block">
-  
-        <!-- Sidebar Toggler (Sidebar) -->
-        <div class="text-center d-none d-md-inline">
-          <button class="rounded-circle border-0" id="sidebarToggle"></button>
-        </div>
-  
-      </ul>
-      <!-- End of Sidebar -->
       <!-- Content Wrapper -->
       <div id="content-wrapper" class="d-flex flex-column">
   
@@ -91,12 +16,19 @@
             </button>
   
             <!-- Topbar Navbar -->
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/state">
+              <div class="sidebar-brand-icon rotate-n-15">
+                <i class="fas fa-microphone-alt"></i>
+              </div>
+              <div class="sidebar-brand-text mx-3">VOID ADMIN</div>
+            </a> 
             <ul class="navbar-nav ml-auto">
               <!-- Nav Item - User Information -->
               <li class="nav-item dropdown no-arrow">
                 <a class="nav-link dropdown-toggle" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="mr-2 d-none d-lg-inline text-gray-600 small">Ovesh Patel</span>
-                  <img class="img-profile rounded-circle" src="img/ovi.jpg">
+                  <span class="mr-2 d-none d-lg-inline text-gray-600 small">Janhavi Zarapkar</span>
+                  <img class="img-profile rounded-circle" src="img/Janhavi.jpg">
                 </a>
                 <!-- Dropdown - User Information -->
                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -121,91 +53,12 @@
             <!-- Content Row -->
             <div class="row">
   
-              <!-- Total Employs Card Example -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-primary shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Employees</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800"><%= count_employ %></div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fas fa-user-alt fa-2x text-gray-300"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-  
-              <!-- Current Time Card Example -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-success shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1 ">Employees Under Grant</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800"><%= count_grant %></div>
-                      </div>
-                      <div class="col-auto">
-                        <a class='nav-link' href="/grant"><i class="fas fa-thumbs-up fa-2x text-gray-300"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-  
-              <!-- People who have marked ATD Card Example -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-info shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Attendance Marked</div>
-                        <div class="row no-gutters align-items-center">
-                          <div class="col-auto">
-                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><%= count_present %></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-  
-              <!-- Pending Requests Card Example -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-warning shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pending Requests</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800"><%= count_request %></div>
-                      </div>
-                      <div class="col-auto">
-                        <a href="/exception"><i class="fas fa-comments fa-2x text-gray-300"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-  
-            <!-- Content Row -->
-  
-            <!-- Content Row -->
-            <div class="row">
-  
               <!-- Bar Chart -->
               <div class="col-xl-8 col-lg-7">
                 <div class="card shadow mb-4">
                   <!-- Card Header - Dropdown -->
                   <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Daily Attendance</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Todays Attendance Record</h6>
                   </div>
                   <!-- Card Body -->
                   <div class="card-body">
@@ -214,7 +67,7 @@
                     </div>
                     <div class=" text-center ">
                       <span class="text-center">
-                        Dates
+                        District
                       </span>
                     </div>
                   </div>
@@ -226,7 +79,7 @@
                 <div class="card shadow mb-4">
                   <!-- Card Header - Dropdown -->
                   <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Departmental Count</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">District Office Employee Count</h6>
                   </div>
                   <!-- Card Body -->
                   <div class="card-body">
@@ -235,17 +88,23 @@
                     </div>
                     <div class="mt-4 text-center small">
                       <span class="mr-2">
-                        <i class="fas fa-circle text-primary"></i> Technical
+                        <a href="/district"><i class="fas fa-circle text-primary"></i> Mumbai</a>
                       </span>
                       <span class="mr-2">
-                        <i class="fas fa-circle text-success"></i> Human Resource
+                        <i class="fas fa-circle text-success"></i> Pune
+                      </span>
+                      <span class="mr-2">
+                        <i class="fas fa-circle text-info"></i> Ahmednagar
                       </span>
                       <br>
                       <span class="mr-2">
-                        <i class="fas fa-circle text-info"></i> Marketing
+                        <i class="fas fa-circle text-warning"></i> Nashik
                       </span>
                       <span class="mr-2">
-                        <i class="fas fa-circle text-warning"></i> Accounts
+                        <i class="fas fa-circle text-danger"></i> Dhule
+                      </span>
+                      <span class="mr-2">
+                        <i class="fas fa-circle text-dark"></i> Akola
                       </span>
                     </div>
                   </div>
@@ -277,25 +136,25 @@
     <!-- Page level plugins -->
     <script src="vendor/chart.js/Chart.min.js"></script>
     <script>
-      var da = "<%= counts %>";
+      var da = "<%= data %>";
       var pie_data =[];
       var d =da.split(',');
       for(var i in d){
         pie_data.push(parseInt(d[i]));
       }
+
       // // Set new default font family and font color to mimic Bootstrap's default styling
       Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
       Chart.defaults.global.defaultFontColor = '#858796';
-
       // Pie Chart Example
       var ctx = document.getElementById("myPieChart");
       var myPieChart = new Chart(ctx, {
         type: 'doughnut',
         data: {
-          labels: ["Technical", "HR", "Marketing","Accounts"],
+          labels: ["Mumbai", "Pune", "Ahmednagar","Nashik","Dhule","Akola"],
           datasets: [{
-            backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc','#f6c23e'],
-            hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf','#f4b619'],
+            backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc','#f6c23e','#e74a3b','#5a5c69'],
+            hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf','#f4b619','#df2c1b','#484954'],
             hoverBorderColor: "rgba(234, 236, 244, 1)",
             data: pie_data
           }],
@@ -315,7 +174,7 @@
           legend: {
             display: false
           },
-          cutoutPercentage: 80,
+          cutoutPercentage: 80
         },
       });
     </script>
@@ -354,8 +213,8 @@
         return s.join(dec);
       }
 
-      var da = "<%= dates %>";
-      var ta = "<%= count %>"
+      var da = "<%= la %>";
+      var ta = "<%= ta %>"
       var count =[];
       var dates =[];
       var d = da.split(',');
